@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en-us">
+
+	<head>
+		<!-- A-Frame core library -->
+		<!-- documentation:  https://aframe.io/ -->
+		<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+		<!-- AR.js Library -->
+		<!-- documentation:  https://ar-js-org.github.io/AR.js-Docs/ -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+		<!-- p5.js core library -->
+		<!-- documentation:  https://p5js.org/reference/ -->
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+		<!-- AFrameP5 AR library -->
+		<!-- documentation:  https://cs.nyu.edu/~kapp/aframep5-ar -->
+		<script src="https://craignyu.github.io/aframep5-ar/libraries/aframep5_ar-v0.4.js"></script>
+
+		<!-- Your custom p5.js sketch -->
+		<script src="sketch.js"></script>
+
+
+		
+
+		
+		<!-- Custom Styles -->
+	 	<style type="text/css">
+
+	
+			  #instructions {
+        		position: absolute;
+        		background-color: grey;
+        		text-align: center; 
+        		display:block;
+        		top: 30%;
+        		left: 50%;
+        		transform: translate(-50%, 0%);
+        		padding: 5px;
+        		border-style: dashed;
+        		width: 600px;
+        		height: 200px;
+        		margin: auto;
+        		font-size:50;
+        		color:white;
+
+      		}
+
+      		#lose{
+      			position: absolute;
+        		background-color: grey;
+        		text-align: center; 
+        		display:none;
+        		top: 30%;
+        		left: 50%;
+        		transform: translate(-50%, 0%);
+        		padding: 5px;
+        		border-style: dashed;
+        		width: 600px;
+        		height: 100px;
+        		margin: auto;
+        		font-size:50;
+        		color:white;
+
+      		}
+
+
+      		#win{
+
+      			position: absolute;
+        		background-color: grey;
+        		text-align: center; 
+        		display:none;
+        		top: 10%;
+        		left: 50%;
+        		transform: translate(-50%, 0%);
+        		padding: 5px;
+        		border-style: dashed;
+        		width: 600px;
+        		height: 100px;
+        		margin: auto;
+        		font-size:50;
+        		color:white;
+
+      		}
+
+
+
+
+		</style>
+
+
+	</head>
+
+	<body style="margin : 0px; overflow: hidden;">
+			<div id="points_div" style="position: absolute; top: 0px; left: 0px; z-index: 1000; font-size:15;color:white">
+			Points: <span id="points">0</span>
+		</div>
+
+		<div id="Timer" style="position: absolute; top: 20px; left: 0px; z-index: 1000; font-size:20;color:white; display:block">
+			Time: <span id="timer">30</span>
+		</div>
+
+		<div id="lose">
+			<h2>You lose!!</h2>
+
+		</div>
+
+		<div id="win">
+			<h2>You won!!</h2>
+
+		</div>
+
+
+
+		<!-- A-Frame Scene -->
+		<a-scene id="ARScene" embedded arjs>
+
+
+
+			<div id="instructions">
+
+			<h2>Welcome to Fast Stack! Use your Hiro marker to stack as many blocks as you can. The goal is to collect 20 blocks before the time runs out!
+			</h2>
+			<br>
+			<h2>Hold up your marker in order to start!</h2>
+
+		</div>
+
+			<!-- markers that we are tracking with a link to the pattern file the AR.js library should be looking for -->
+			<a-marker id="hiro" type="pattern" url="marker/patt.hiro"></a-marker>
+
+
+			<!-- default camera entity (leave this and don't change it) -->
+			<a-entity camera></a-entity>
+
+		</a-scene>
+
+	</body>
+
+</html>
