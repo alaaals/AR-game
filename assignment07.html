@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-us">
+
+	<head>
+		<!-- A-Frame core library -->
+		<!-- documentation:  https://aframe.io/ -->
+		<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+
+		<!-- AR.js Library -->
+		<!-- documentation:  https://ar-js-org.github.io/AR.js-Docs/ -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+		<!-- p5.js core library -->
+		<!-- documentation:  https://p5js.org/reference/ -->
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+		<!-- AFrameP5 AR library -->
+		<!-- documentation:  https://cs.nyu.edu/~kapp/aframep5-ar -->
+		<script src="https://craignyu.github.io/aframep5-ar/libraries/aframep5_ar-v0.4.js"></script>
+
+		<!-- Your custom p5.js sketch -->
+	 	
+
+
+		<!-- Custom Styles -->
+	 	<style type="text/css">
+
+	 		 #design{
+
+      			background: pink;
+        		font-size:50;
+        		color:black;
+        		font-family: "Times New Roman", Times;
+        		padding: 10px;
+        		border-style: dashed;
+
+
+
+
+      		}
+
+      		html{
+      			background: lightskyblue;
+      			overflow: scroll;
+
+      		}
+
+      		h1{
+      			color:green;
+      		}
+
+      		iframe{
+      			display: block;
+      			margin:auto;
+      		}
+
+
+		</style>
+
+
+	</head>
+
+	<body style="margin : 0px; overflow: hidden;">
+
+<div id="whole">
+		
+
+		<iframe src="index.html" width="1500" height="1000" style="position: center;"></iframe>
+
+
+		<div id="design">
+			<h1>Brief overview of the design process:</h1>
+			<br>
+			<h2>To implement a stack-like feature, I ensured that once a block has been collected by the user, it gets added into the "stacked blocks" array, which is then attatched to the Hiro tracker. I gave each block a (randomly generated) color and speed. The game goes throigh multtiple states: a Begin state, which is this one, a Play state, and then either a Win state (if player wins) or a Lose state (if player loses). Enjoy! </h2>
+
+
+
+			<br>
+			<h2>Here are some game inspirations for my game:</h2>
+			<img src="images/inspo.png" alt="Inspiration for game" width="800" height="800">
+			<img src="images/inspo2.jpeg" alt="Inspiration" width="800" height="800">
+
+
+
+
+		</div>
+
+
+
+	</div>
+
+
+	</body>
+
+</html>
